@@ -31,21 +31,23 @@ https://mypay.iemoney.co.nz/api/online
 #### 同步返回:
 
 ```
- {
+{
     "is_success": "TRUE",
     "message": "weixin://wxpay/bizpayurl?pr=uD61Ba3",
     "extra": []
- }
- {
+}
+
+{
     "is_success": "TRUE",
     "message": "alipay://wxpay/bizpayurl?pr=MPsO2Nu",
     "extra": []
 }
- {
+
+{
     "is_success": "FALSE",
     "message": "SIGN_ERROR",
     "extra": []
- }
+}
  
 {
     "is_success": "FALSE",
@@ -62,6 +64,7 @@ https://mypay.iemoney.co.nz/api/online
 
 #### 异步返回:
 
+```
 异步请求收到后，要输出"SUCCESS"，不然会一直重复发送异步通知，持续发送时间间隔不断增大。
 
 注：可能会在一开始的时候，就一次性发送两条通知。商户需注意订单号的唯一性。
@@ -72,4 +75,8 @@ $url = $notify_url."?out_trade_no=".$out_trade_no."&trade_no=".$trade_no."&trade
 
 $sign = md5($trade_no.$out_trade_no.'SUCCESS'.$api_key);
 
+举个栗子🌰：
+
+http://www.test.com?out_trade_no=2123123213d213233d1212131b&trade_no=2018050421001003210531923654&trade_status=SUCCESS&sign=198e7f765ccaebbc2157ce5e936ee1ff
+```
 
