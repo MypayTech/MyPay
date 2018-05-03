@@ -17,7 +17,7 @@ https://mypay.iemoney.co.nz/api/online
 |-----------|--------|-----------|
 |mid        |int     |5位数，这边获取注册|
 |total_fee        |string  |金额, NZD, 以cent为单位，如：2005 = 20.05纽币
-|rmb_fee        |string  |金额, RMB, 以人民币分为单位，如：2005= 20.05人民币, total_fee和rmb\_fee只能传递一个，否则不支持
+|rmb_fee        |string  |金额, RMB, 以人民币分为单位，如：2005= 20.05人民币, total_fee和rmb\_fee只能传递一个（Alipay）
 |goods   |string(64)  |商品名字，不能含有特殊字符，必填|
 |goods_detail   |string(128)  |商品描述，不能含有特殊字符，必填|
 |out\_trade_no   |string  |商户自己的订单号，于pay_type的组合必须唯一，微信最多32位，支付宝最多64位，官方建议：时间日期，加随机数，唯一订单号. 必填|
