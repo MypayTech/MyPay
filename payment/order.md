@@ -58,6 +58,8 @@ https://mypay.iemoney.co.nz/api/online
     }
 }
 
+```
+
 #### 异步返回:
 
 异步请求收到后，要输出"SUCCESS"，不然会一直重复发送异步通知，持续发送时间间隔不断增大。
@@ -66,4 +68,3 @@ https://mypay.iemoney.co.nz/api/online
 $sign = md5($trade_no.$out_trade_no.'SUCCESS'.$api_key);
 $url = $row['notify_url']."?out_trade_no=".$out_trade_no."&trade_no=".$trade_no."&trade_status=SUCCESS&sign=".$sign;
 
-```
