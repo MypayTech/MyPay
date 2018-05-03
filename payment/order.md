@@ -80,4 +80,6 @@ $sign = md5($trade_no.$out_trade_no.'SUCCESS'.$api_key);
 http://www.test.com?out_trade_no=2123123213d213233d1212131b&trade_no=2018050421001003210531923654&trade_status=SUCCESS&sign=198e7f765ccaebbc2157ce5e936ee1ff
 ```
 
-### 有任何接入的问题可以随时联系MyPay这边的技术人员。随时回复，协助开发。
+### 🏄 有任何接入的问题可以随时联系MyPay这边的技术人员。随时回复，协助开发。😊
+
+$url = $notify_url."?out_trade_no=".$out_trade_no."&trade_no=".$trade_no."&trade_status=SUCCESS&sign=".$sign;
