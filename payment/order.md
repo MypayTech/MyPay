@@ -71,13 +71,13 @@ https://mypay.iemoney.co.nz/api/online
 
 异步请求返回：
 
-$url = $notify_url."?out_trade_no=".$out_trade_no."&trade_no=".$trade_no."&trade_status=SUCCESS&sign=".$sign;
+$url = $notify_url."?out_trade_no=".$out_trade_no."&trade_no=".$trade_no."&trade_status=SUCCESS&pay_type=".$pay_type."&sign=".$sign;
 
 $sign = md5($trade_no.$out_trade_no.'SUCCESS'.$api_key);
 
 举个栗子🌰：
 
-http://www.test.com?out_trade_no=2123123213d213233d1212131b&trade_no=2018050421001003210531923654&trade_status=SUCCESS&sign=198e7f765ccaebbc2157ce5e936ee1ff
+http://www.test.com?out_trade_no=2123123213d213233d1212131b&trade_no=2018050421001003210531923654&trade_status=SUCCESS&pay_type=IE0012&sign=198e7f765ccaebbc2157ce5e936ee1ff
 ```
 
 #### 🏄 有任何接入的问题可以随时联系MyPay这边的技术人员。随时回复，协助开发。😊
