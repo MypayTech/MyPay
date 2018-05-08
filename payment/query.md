@@ -10,7 +10,7 @@
 #### 请求:
 
 ```
-Method: HTTP GET
+Method: HTTP POST
 
 https://mypay.iemoney.co.nz/api/check_order_status
 ```
