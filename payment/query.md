@@ -30,13 +30,19 @@ success:
 	    "is_success": "TRUE",
 	    "message": {
 		"pay_type": "IE0022",
-		"out_trade_no": "2018050803414613700000490",
-		"order_status": "1"
+		"trade_no": "4200000110201805020781113373",
+		"out_trade_no": "2018050803260513700000490",
+		"order_status": "1",
+		"total_fee": "1.00",
+		"goods": "title $ And tes标题",
+		"pay_url": "https://qr.alipay.com/bax07519y22ihnvnkni3205c",
+		"return_url": "http://www.test.com",
+		"notify_url": "http://www.test.com"
 	    },
 	    "extra": []
 	}
 	
-	返回 order_status状态， 0代表未支付, 1代表已支付, 2代表已退款， 3代表已结算， 4代表结算了并且退款
+返回 order_status状态， 0代表未支付, 1代表已支付, 2代表已退款， 3代表已结算， 4代表结算了并且退款
 
 fail:
 	{
