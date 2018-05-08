@@ -28,9 +28,15 @@ https://mypay.iemoney.co.nz/api/check_order_status
 success:
 	{
 	    "is_success": "TRUE",
-	    "message": "SUCCESS",
+	    "message": {
+		"pay_type": "IE0022",
+		"out_trade_no": "2018050803414613700000490",
+		"order_status": "1"
+	    },
 	    "extra": []
 	}
+	
+	返回 order_status状态， 0代表未支付, 1代表已支付, 2代表已退款， 3代表已结算， 4代表结算了并且退款
 
 fail:
 	{
@@ -43,15 +49,5 @@ fail:
 	    "message": "COMBINE_ERROR",
 	    "extra": []
 	}
-	{
-	    "is_success": "TRUE",
-	    "message": {
-		"pay_type": "IE0022",
-		"out_trade_no": "2018050803414613700000490",
-		"order_status": "1"
-	    },
-	    "extra": []
-	}
 	
-	返回 order_status状态， 0代表未支付, 1代表已支付, 2代表已退款， 3代表已结算， 4代表结算了并且退款
 ```
