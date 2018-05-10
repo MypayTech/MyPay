@@ -28,7 +28,7 @@ https://mypay.iemoney.co.nz/api/online
 |sign       |string  |签名，签名规则 sign md5($mid.$pay\_type.$out\_trade_no.$notify\_url.$api\_key)<br/>api\_key 通过平台注册时获取|
 
 
-#### 同步返回:
+#### 返回:
 
 ```
 {
@@ -62,7 +62,23 @@ https://mypay.iemoney.co.nz/api/online
 
 ```
 
-#### 异步返回:
+#### 支付结果同步通知:
+
+```
+支付成功后，会同步返回通知：
+$url = $notify_url."?out_trade_no=".$out_trade_no."&trade_status=SUCCESS&pay_type=".$pay_type."&sign=".$sign;
+
+$sign = md5($out_trade_no.$pay_type.$api_key);
+
+举个栗子🌰：
+
+http://www.test.com?out_trade_no=2123123213d213233d1212131b&trade_status=SUCCESS&pay_type=IE0022&sign=198e7f765ccaebbc2157ce5e936ee1ff
+
+⚠️注：同步返回是不可靠的，可能会由于网络原因比异步返回更快。只可用于UI显示交互的作用。不能用于结果的凭据。
+
+```
+
+#### 支付结果异步通知:
 
 ```
 异步请求收到后，要输出"SUCCESS"，不然会一直重复发送异步通知，持续发送时间间隔不断增大。
