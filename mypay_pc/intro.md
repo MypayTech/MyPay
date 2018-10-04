@@ -30,12 +30,3 @@
     <img alt="Parcel" src="wechat_success.png" width="40%">
 </p>
 
-### 结果返回页面：
-商户的回调页面需要商户在MyPay系统中自己修改
-<p align="center">
-    <img alt="Parcel" src="mypay_dash.png" width="80%">
-</p>
-
-<p align="center">
-    <img alt="Parcel" src="mypay_return.png" width="80%">
-</p>
