@@ -31,6 +31,13 @@ https://mypay.iemoney.co.nz/rate/query_rate
             "ct": "2018-04-16 11:00:01"
         },
         {
+        "id": "12",
+        "type": "alipay_online",
+        "currency": "NZD",
+        "rate": "4.6536",
+        "ct": "2018-04-16 11:00:01"
+        },
+        {
             "id": "11",
             "type": "wechat",
             "currency": "NZD",
